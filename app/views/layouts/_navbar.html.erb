@@ -1,0 +1,27 @@
+    <nav class="navbar navbar-expand-lg nav-bar-own-blue p-1">
+  <div class="container-fluid d-flex justify-content-center">
+    <a class="navbar-brand" href="#"><i class="fa-solid fa-grip" style="color: #ffffff;"></i></a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active text-white" aria-current="page" href="#">Outlook</a>
+        </li>
+        <%# <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> %>
+      </ul>
+      <form class="d-flex " role="search">
+        <input class="form-control test" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <%= link_to '#', class:" d-flex align-items-center" do %>
+        <i class="fa-solid fa-gear me-3 p-1" style="color: #ffffff;"></i>
+      <% end %>
+      <%= link_to '#', class:" d-flex align-items-center" do %>
+        <i class="fa-solid fa-question me-3 p-1" style="color: #ffffff;"></i>
+      <% end %>
+      <%= link_to '#', class:" d-flex align-items-center" do %>
+        <i class="fa-solid fa-bullhorn me-3 p-1 " style="color: #ffffff;"></i>
+      <% end %>
+    </div>
+  </div>
+</nav>
