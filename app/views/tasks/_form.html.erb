@@ -1,22 +1,8 @@
-<%= form_with(model: task) do |form| %>
-  <% if task.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
-
-      <ul>
-        <% task.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+<div class="card d-flex mb-3">
+  <%= form_with(model: @task) do |form| %>
+    <div class=" p-3">
+      <i class="fa-regular fa-circle mt-1 me-4" style="color:#2564cf;"></i>
+      <%= form.text_field :body, class:"border-0 w-75", placeholder:"Додайте завдання"%>
     </div>
   <% end %>
-
-  <div>
-    <%= form.label :body, style: "display: block" %>
-    <%= form.text_field :body %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

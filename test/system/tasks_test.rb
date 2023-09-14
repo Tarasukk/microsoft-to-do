@@ -15,6 +15,7 @@ class TasksTest < ApplicationSystemTestCase
     click_on "New task"
 
     fill_in "Body", with: @task.body
+    check "Ready" if @task.ready
     click_on "Create Task"
 
     assert_text "Task was successfully created"
@@ -26,6 +27,7 @@ class TasksTest < ApplicationSystemTestCase
     click_on "Edit this task", match: :first
 
     fill_in "Body", with: @task.body
+    check "Ready" if @task.ready
     click_on "Update Task"
 
     assert_text "Task was successfully updated"

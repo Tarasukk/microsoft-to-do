@@ -1,7 +1,9 @@
-<div id="<%= dom_id task %>">
-  <p>
-    <strong>Body:</strong>
-    <%= task.body %>
-  </p>
-
+<div id="<%= dom_id task %>" class="card d-flex flex-row justify-content-between p-3" >
+  <div class="d-flex">
+    <i class="fa-regular fa-circle mt-1 me-4" style="color:#2564cf;"></i>
+    <p>
+      <%= task.body %>
+    </p>
+  </div>
+  <i class="fa-regular fa-star mt-1" style="color:#2564cf;"></i>
 </div>

@@ -1,5 +1,13 @@
+p {
+  margin: 0px;
+}
+
 .nav-bar-own-blue {
   background: #2564cf;
+}
+
+.task-menu-own-gray {
+  background: #faf9f8;
 }
 
 .test {
@@ -7,6 +15,16 @@
   width: 500px;
 }
 
-.fa-solid:hover {
-  background-color: #1b4b9e;
+input:focus {
+  border-color: transparent;
+
+  outline: none;
+
+}
+
+.profile-edit-btn {
+  color: black;
+  font-weight: bold;
+  border-left: solid #2564cf 3px;
+  background: #eff6fc;
 }
