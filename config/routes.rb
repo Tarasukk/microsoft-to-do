@@ -6,4 +6,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  put "toggle_enabled/:id", to: "tasks#toggle_enabled", as: :toggle_enabled
+
 end

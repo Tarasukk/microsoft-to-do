@@ -1,0 +1,19 @@
+<%= turbo_frame_tag "task#{task.id}actions" do %>
+  <div class="d-flex gap-3">
+    <% if task.enabled %>
+      <%= button_to toggle_enabled_path(task), method: :put,style: 'border:none; background:none' do %>
+        <i class="fa-solid fa-star" style="color:#2564cf;"></i>
+      <% end %>
+    <% else %>
+      <%= button_to toggle_enabled_path(task), method: :put,style: 'border:none; background:none' do %>
+        <i class="fa-regular fa-star" style="color:#2564cf;"></i>
+      <% end %>
+    <% end %>
+    <%= button_to task, method: :delete, class: "btn m-0 p-0 border-0", style: "color:#2564cf;" do %>
+      <i class="fa-regular fa-trash-can "></i>
+    <% end %>
+    <%= link_to edit_task_path(task), class:"text-decoration-none" do %>
+      <i class="fa-solid fa-pencil mt-1" style="color:#2564cf;"></i>
+    <% end %>
+  </div>
+<% end %>

@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: %i[ show edit update destroy ]
+  before_action :set_task, only: %i[ show edit update destroy toggle_enabled ]
 
   # GET /tasks or /tasks.json
   def index
@@ -21,6 +21,20 @@ class TasksController < ApplicationController
   def edit
   end
 
+  def toggle_enabled
+    @task.enabled = !@task.enabled
+    @task.save
+
+    respond_to do |format|
+      format.turbo_stream do
+        render turbo_stream: turbo_stream.replace(
+          "task#{@task.id}actions",
+          partial: "tasks/task_actions",
+          locals: {task: @task}
+        )
+      end
+    end
+  end
   # POST /tasks or /tasks.json
   def create
     
